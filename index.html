@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aprendizaje Supervisado</title>
+<meta name="description" content="Materiales del curso de Aprendizaje Supervisado: presentaciones y notebooks de actividades.">
+<link rel="stylesheet" href="assets/estilo.css">
+</head>
+<body>
+<header class="portada">
+  <div class="contenedor">
+    <span class="etiqueta">Programa de TI</span>
+    <h1>Aprendizaje Supervisado</h1>
+    <p>Presentaciones y actividades del curso</p>
+  </div>
+</header>
+
+<main class="contenedor">
+  <h2>Sobre el curso</h2>
+  <p>De los datos crudos a modelos listos para usarse: preparación de datos, regresión, clasificación y métodos de ensamble,
+     con Python (<code>pandas</code>, <code>NumPy</code>, <code>Matplotlib</code> y <code>scikit-learn</code>).
+     Cada sesión combina la intuición, las fórmulas necesarias y una actividad práctica.</p>
+  <div class="cuadricula">
+    <div class="dato"><b>14 sesiones</b><span>de 2 horas, en línea</span></div>
+    <div class="dato"><b>Actividades</b><span>notebooks de trabajo individual</span></div>
+    <div class="dato"><b>Antecedentes</b><span>Introducción al aprendizaje automático y Programación para IA</span></div>
+  </div>
+
+  <h2>Unidades</h2>
+
+  <article class="unidad" id="unidad1">
+    <header>
+      <span class="num">Unidad 1</span>
+      <h3>Preparación de datos y análisis exploratorio (EDA)</h3>
+    </header>
+    <div class="cuerpo">
+      <p><b>Temas:</b></p>
+      <ul>
+        <li>Estadística descriptiva: media, varianza, asimetría y curtosis.</li>
+        <li>Análisis univariado y bivariado: histogramas, boxplots, covarianza, correlación de Pearson y Spearman.</li>
+        <li>Valores atípicos con boxplots y la regla del IQR; topes (censura) y transformaciones.</li>
+        <li>Matriz de correlación, <i>heatmaps</i> y multicolinealidad.</li>
+      </ul>
+      <div class="botones">
+        <a class="boton" href="unidad1/presentacion_unidad1_eda.pdf">Presentación (PDF)</a>
+        <a class="boton sec" href="unidad1/actividad_eda_california_housing.ipynb" download>Descargar notebook</a>
+        <a class="boton sec" data-colab="unidad1/actividad_eda_california_housing.ipynb" href="#" aria-disabled="true">Abrir en Colab</a>
+      </div>
+      <p class="nota"><b>Actividad:</b> identificar valores atípicos con boxplots y la regla del IQR, y hacer un EDA completo
+        del conjunto California Housing. Trabajo individual, 40–50 minutos. El notebook descarga los datos al ejecutarse
+        (requiere conexión a internet).</p>
+    </div>
+  </article>
+
+  <p class="pronto">Las siguientes unidades se publicarán aquí conforme estén listas.</p>
+</main>
+
+<footer>
+  <div class="contenedor">Material del curso de Aprendizaje Supervisado.</div>
+</footer>
+
+<script>
+/* Construye los enlaces «Abrir en Colab» a partir de la dirección de GitHub Pages
+   (https://USUARIO.github.io/REPOSITORIO/). Si se abre el archivo localmente, el botón queda desactivado. */
+(function () {
+  try {
+    var host = location.hostname, partes = location.pathname.split('/').filter(Boolean);
+    if (!/\.github\.io$/.test(host) || !partes.length) return;
+    var usuario = host.split('.')[0], repo = partes[0];
+    document.querySelectorAll('[data-colab]').forEach(function (a) {
+      a.href = 'https://colab.research.google.com/github/' + usuario + '/' + repo + '/blob/main/' + a.dataset.colab;
+      a.removeAttribute('aria-disabled');
+      a.target = '_blank'; a.rel = 'noopener';
+    });
+  } catch (e) {}
+})();
+</script>
+</body>
+</html>

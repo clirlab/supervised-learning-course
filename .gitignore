@@ -1,0 +1,13 @@
+# Solucionarios y archivos de trabajo: nunca se publican
+*solucion*
+*_solution*
+solucionarios/
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+*.vrb
+.ipynb_checkpoints/
+.DS_Store
