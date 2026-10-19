@@ -27,6 +27,12 @@
     <div class="dato"><b>Antecedentes</b><span>Introducción al aprendizaje automático y Programación para IA</span></div>
   </div>
 
+  <h2>Planeación didáctica</h2>
+  <p>Calendario de las 14 sesiones, temas, laboratorios, evaluación y recursos del curso.</p>
+  <div class="botones">
+    <a class="boton" href="curso/planeacion_didactica.pdf">Planeación didáctica (PDF)</a>
+  </div>
+
   <h2>Unidades</h2>
 
   <article class="unidad" id="unidad1">
@@ -50,6 +56,31 @@
       <p class="nota"><b>Actividad:</b> identificar valores atípicos con boxplots y la regla del IQR, y hacer un EDA completo
         del conjunto California Housing. Trabajo individual, 40–50 minutos. El notebook descarga los datos al ejecutarse
         (requiere conexión a internet).</p>
+    </div>
+  </article>
+
+  <article class="unidad" id="unidad2">
+    <header>
+      <span class="num">Unidad 2</span>
+      <h3>Preprocesamiento de datos</h3>
+    </header>
+    <div class="cuerpo">
+      <p><b>Temas:</b></p>
+      <ul>
+        <li>Valores faltantes: mecanismos (MCAR, MAR, MNAR), borrar o imputar (media, mediana, KNN, iterativa).</li>
+        <li>Variables categóricas: codificación entera, ordinal y <i>one-hot</i>.</li>
+        <li>Escalado: <code>StandardScaler</code>, <code>MinMaxScaler</code> y <code>RobustScaler</code>.</li>
+        <li>División entrenamiento / validación / prueba, validación cruzada y fuga de datos.</li>
+        <li><code>Pipeline</code> y <code>ColumnTransformer</code> de scikit-learn.</li>
+      </ul>
+      <div class="botones">
+        <a class="boton" href="unidad2/presentacion_unidad2_preprocesamiento.pdf">Presentación (PDF)</a>
+        <a class="boton sec" href="unidad2/actividad_preprocesamiento.ipynb" download>Descargar notebook</a>
+        <a class="boton sec" data-colab="unidad2/actividad_preprocesamiento.ipynb" href="#" aria-disabled="true">Abrir en Colab</a>
+      </div>
+      <p class="nota"><b>Actividad:</b> construir un pipeline de preprocesamiento sobre California Housing (faltantes, codificación,
+        escalado, fuga de datos, <code>Pipeline</code> y <code>ColumnTransformer</code>). Trabajo individual, 60–75 minutos.
+        El notebook descarga los datos al ejecutarse (requiere conexión a internet).</p>
     </div>
   </article>
 

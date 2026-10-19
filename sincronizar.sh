@@ -5,4 +5,9 @@ set -e
 cd "$(dirname "$0")"
 cp -f ../v3/unidad1_eda.pdf unidad1/presentacion_unidad1_eda.pdf
 cp -f ../v3/notebooks/actividad_unidad1_eda_california_housing.ipynb unidad1/actividad_eda_california_housing.ipynb
+mkdir -p unidad2
+cp -f ../v3/unidad2_preprocesamiento.pdf unidad2/presentacion_unidad2_preprocesamiento.pdf
+cp -f ../v3/notebooks/actividad_unidad2_preprocesamiento.ipynb unidad2/actividad_preprocesamiento.ipynb
+mkdir -p curso
+cp -f ../Planeacion_Didactica_Aprendizaje_Supervisado.pdf curso/planeacion_didactica.pdf
 echo "Materiales sincronizados."

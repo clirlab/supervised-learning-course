@@ -4,7 +4,8 @@ Sitio del curso (GitHub Pages): presentaciones en PDF y notebooks de las activid
 
 ## Estructura
 - `index.html`, `assets/`: la página del curso.
-- `unidad1/`: presentación y notebook de la Unidad 1.
+- `curso/`: planeación didáctica (PDF).
+- `unidad1/`, `unidad2/`: presentación y notebook de cada unidad.
 - `sincronizar.sh`: copia los materiales más recientes desde la carpeta de trabajo.
 - `publicar.sh`: sincroniza, hace commit y sube a GitHub.
 
