@@ -13,6 +13,8 @@ cp -f ../v3/notebooks/actividad_unidad2_preprocesamiento.ipynb unidad2/actividad
 mkdir -p unidad3
 cp -f ../v3/unidad3_ingenieria_seleccion.pdf unidad3/presentacion_unidad3_seleccion_variables.pdf
 cp -f ../v3/notebooks/actividad_unidad3_seleccion_variables.ipynb unidad3/actividad_seleccion_variables.ipynb
+mkdir -p modulo1
+cp -f ../v3/repaso_unidades_1_3.pdf modulo1/repaso_unidades_1_3.pdf
 mkdir -p curso
 cp -f ../Planeacion_Didactica_Aprendizaje_Supervisado.pdf curso/planeacion_didactica.pdf
 echo "Materiales sincronizados."

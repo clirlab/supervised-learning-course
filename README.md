@@ -4,6 +4,7 @@ Sitio del curso (GitHub Pages): presentaciones en PDF y notebooks de las activid
 
 ## Estructura
 - `index.html`, `assets/`: la página del curso.
+- `modulo1/`: presentación de repaso de las Unidades 1–3 y entrega del examen (botón del formulario: variable `FORM_URL` en `index.html`).
 - `curso/`: planeación didáctica (PDF).
 - `unidad1/`, `unidad2/`, `unidad3/`: presentación y notebook de cada unidad.
 - `sincronizar.sh`: copia los materiales más recientes desde la carpeta de trabajo.

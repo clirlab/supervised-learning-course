@@ -128,6 +128,36 @@
     </div>
   </article>
 
+  <article class="unidad" id="modulo1">
+    <header>
+      <span class="num">Módulo 1</span>
+      <h3>Repaso y entrega del examen · Preparación de datos</h3>
+    </header>
+    <div class="cuerpo">
+      <p><b>Repaso de las Unidades 1–3:</b></p>
+      <ul>
+        <li>Análisis exploratorio (EDA): estadística descriptiva, valores atípicos, correlación y multicolinealidad.</li>
+        <li>Preprocesamiento: faltantes, codificación, escalado, particiones y fuga de datos, <code>Pipeline</code> y <code>ColumnTransformer</code>.</li>
+        <li>Ingeniería y selección de variables: filtro, envoltura (RFE) e integrados (Lasso).</li>
+      </ul>
+      <div class="botones">
+        <a class="boton" href="modulo1/repaso_unidades_1_3.pdf">Presentación de repaso (PDF)</a>
+        <a class="boton sec" id="btn-formulario" href="#" hidden target="_blank" rel="noopener">Formulario de entrega del examen</a>
+      </div>
+
+      <h4>Cómo entregar el examen</h4>
+      <ol class="pasos">
+        <li>Resuelve el examen de forma individual en el notebook que se te proporcione y escribe tu nombre en la variable <code>NOMBRE</code>.</li>
+        <li>Antes de entregar ejecuta <b>Kernel → Reiniciar y ejecutar todo</b> (en Colab: <i>Entorno de ejecución → Ejecutar todo</i>). El notebook debe correr de principio a fin sin errores y con tus respuestas escritas en las celdas de texto.</li>
+        <li>Descarga el notebook como <code>.ipynb</code> (en Colab: <i>Archivo → Descargar → Descargar .ipynb</i>) y nómbralo <code>apellido_nombre_examen_modulo1.ipynb</code>.</li>
+        <li>Abre el formulario de entrega e inicia sesión con tu cuenta de Google (es necesario para subir archivos).</li>
+        <li>Escribe tu nombre completo y tu correo institucional o matrícula, sube <b>un solo archivo</b> (máximo 10 MB) y envía.</li>
+        <li>Verifica que recibiste la confirmación de envío. Puedes reenviar antes de la fecha límite; se revisa el último envío.</li>
+      </ol>
+      <p class="nota">Solo se acepta el archivo <code>.ipynb</code> (no PDF ni capturas). Las entregas fuera de plazo o sin ejecutar pueden perder puntos.</p>
+    </div>
+  </article>
+
   <p class="pronto">Las siguientes unidades se publicarán aquí conforme estén listas.</p>
 </main>
 
@@ -150,6 +180,11 @@
     });
   } catch (e) {}
 })();
+</script>
+<script>
+/* Pega aquí la dirección pública del formulario cuando esté publicado; mientras esté vacía, el botón permanece oculto. */
+var FORM_URL = "";
+(function () { var b = document.getElementById('btn-formulario'); if (b && FORM_URL) { b.href = FORM_URL; b.hidden = false; } })();
 </script>
 </body>
 </html>

@@ -42,3 +42,8 @@ h2:first-child{margin-top:0}
 .pronto{color:var(--suave);font-style:italic}
 .nota{font-size:14px;color:var(--suave);margin-top:8px}
 footer{border-top:1px solid var(--borde);padding:20px 0;color:var(--suave);font-size:14px}
+
+.unidad h4{margin:18px 0 6px;font-size:16px}
+.pasos{margin:6px 0 10px;padding-left:22px}
+.pasos li{margin:4px 0}
+[hidden]{display:none!important}
