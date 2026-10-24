@@ -13,7 +13,8 @@ elif ! git remote get-url origin >/dev/null 2>&1; then
 fi
 echo "Remoto: $(git remote get-url origin)"
 git add -A
-if git ls-files | grep -qi solucion; then echo "ALTO: hay un solucionario en el repositorio."; exit 1; fi
+if git ls-files | grep -i solucion | grep -qv -E "^unidad[123]/solucion_[a-z_]+\.ipynb$"; then echo "ALTO: hay un solucionario no autorizado en el repositorio (solo se permiten las soluciones de las Unidades 1-3)."; exit 1; fi
+if git ls-files | grep -qi -E "examen.*(solucion|rubrica)|(solucion|rubrica).*examen"; then echo "ALTO: la solución del examen está en el repositorio."; exit 1; fi
 git commit -m "Actualiza materiales del curso" || echo "No hay cambios nuevos."
 git push -u origin main
 echo "Listo. Activa GitHub Pages la primera vez: Settings > Pages > Deploy from a branch > main / (root)."
