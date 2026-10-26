@@ -7,6 +7,7 @@ Sitio del curso (GitHub Pages): presentaciones en PDF y notebooks de las activid
 - `modulo1/`: presentación de repaso de las Unidades 1–3, notebook del examen (sin solución) y entrega del examen (botón del formulario: variable `FORM_URL` en `index.html`).
 - `curso/`: planeación didáctica (PDF).
 - `unidad1/`, `unidad2/`, `unidad3/`: presentación, notebook y solución de cada unidad.
+- `unidad4/`: presentación y notebook de la actividad (la solución está en el repositorio privado de solucionarios).
 - `sincronizar.sh`: copia los materiales más recientes desde la carpeta de trabajo.
 - `publicar.sh`: sincroniza, hace commit y sube a GitHub.
 
