@@ -189,6 +189,32 @@
     </div>
   </article>
 
+  <article class="unidad" id="unidad5">
+    <header>
+      <span class="num">Unidad 5</span>
+      <h3>Regresión regularizada</h3>
+    </header>
+    <div class="cuerpo">
+      <p><b>Temas:</b></p>
+      <ul>
+        <li>Por qué falla OLS en alta dimensión: curvas de aprendizaje y el límite cuando <i>n</i> ≈ <i>p</i>; pesos inestables.</li>
+        <li>Ridge (L2): penaliza el cuadrado de los pesos y los encoge proporcionalmente.</li>
+        <li>Lasso (L1): penaliza el valor absoluto; por geometría, lleva coeficientes exactamente a cero (selección de variables).</li>
+        <li>Elastic Net: mezcla L1/L2 con dos hiperparámetros (<code>alpha</code>, <code>l1_ratio</code>); qué hace con variables correlacionadas.</li>
+        <li>Elección de <code>alpha</code> por validación cruzada; comparación de error de entrenamiento/prueba y recuperación de las variables verdaderas.</li>
+      </ul>
+      <div class="botones">
+        <a class="boton" href="unidad5/presentacion_unidad5_regresion_regularizada.pdf">Presentación (PDF)</a>
+        <a class="boton sec" href="unidad5/actividad_regresion_regularizada.ipynb" download>Descargar notebook</a>
+        <a class="boton sec" data-colab="unidad5/actividad_regresion_regularizada.ipynb" href="#" aria-disabled="true">Abrir en Colab</a>
+      </div>
+      <p class="nota"><b>Actividad:</b> comparar OLS, Ridge, Lasso y Elastic Net con el mismo protocolo en un conjunto simulado de
+        alta dimensión (100 observaciones de entrenamiento, 150 variables, solo 10 realmente relevantes): cuánto sobreajusta OLS,
+        qué hace cada penalización con los coeficientes y qué método recupera mejor las variables correctas. Trabajo individual,
+        60–75 minutos.</p>
+    </div>
+  </article>
+
   <p class="pronto">Las siguientes unidades se publicarán aquí conforme estén listas.</p>
 </main>
 

@@ -23,6 +23,9 @@ cp -f ../v3/notebooks/examen_modulo1_preparacion_datos.ipynb modulo1/examen_modu
 mkdir -p unidad4
 cp -f ../v3/unidad4_regresion_lineal_polinomial.pdf unidad4/presentacion_unidad4_regresion_lineal_polinomial.pdf
 cp -f ../v3/notebooks/actividad_unidad4_regresion_lineal_polinomial.ipynb unidad4/actividad_regresion_lineal_polinomial.ipynb
+mkdir -p unidad5
+cp -f ../v3/unidad5_regresion_regularizada.pdf unidad5/presentacion_unidad5_regresion_regularizada.pdf
+cp -f ../v3/notebooks/actividad_unidad5_regresion_regularizada.ipynb unidad5/actividad_regresion_regularizada.ipynb
 mkdir -p curso
 cp -f ../Planeacion_Didactica_Aprendizaje_Supervisado.pdf curso/planeacion_didactica.pdf
 echo "Materiales sincronizados."
