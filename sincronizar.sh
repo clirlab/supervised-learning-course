@@ -26,6 +26,10 @@ cp -f ../v3/notebooks/actividad_unidad4_regresion_lineal_polinomial.ipynb unidad
 mkdir -p unidad5
 cp -f ../v3/unidad5_regresion_regularizada.pdf unidad5/presentacion_unidad5_regresion_regularizada.pdf
 cp -f ../v3/notebooks/actividad_unidad5_regresion_regularizada.ipynb unidad5/actividad_regresion_regularizada.ipynb
+mkdir -p unidad6
+cp -f ../v3/unidad6_svr.pdf unidad6/presentacion_unidad6_svr.pdf
+cp -f ../v3/notebooks/actividad_unidad6_svr.ipynb unidad6/actividad_svr.ipynb
+cp -f ../datos_sinteticos/consumo_energetico.csv unidad6/consumo_energetico.csv
 mkdir -p curso
 cp -f ../Planeacion_Didactica_Aprendizaje_Supervisado.pdf curso/planeacion_didactica.pdf
 echo "Materiales sincronizados."

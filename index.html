@@ -215,6 +215,32 @@
     </div>
   </article>
 
+  <article class="unidad" id="unidad6">
+    <header>
+      <span class="num">Unidad 6</span>
+      <h3>Regresión con máquinas de vectores de soporte (SVR)</h3>
+    </header>
+    <div class="cuerpo">
+      <p><b>Temas:</b></p>
+      <ul>
+        <li>De SVM a SVR: margen duro y margen blando (par&aacute;metro <i>C</i>) como otra forma de controlar la complejidad.</li>
+        <li>El tubo <i>&epsilon;</i>-insensible y la funci&oacute;n de p&eacute;rdida que ignora residuos peque&ntilde;os.</li>
+        <li>Efecto de <i>C</i> y de <i>&epsilon;</i> sobre el ajuste y el n&uacute;mero de vectores de soporte.</li>
+        <li>El truco del kernel (lineal, polinomial, RBF) para curvas sin construir variables nuevas a mano; el par&aacute;metro <i>&gamma;</i>.</li>
+        <li>B&uacute;squeda conjunta de hiperpar&aacute;metros con <code>GridSearchCV</code> dentro de un <code>Pipeline</code>.</li>
+      </ul>
+      <div class="botones">
+        <a class="boton" href="unidad6/presentacion_unidad6_svr.pdf">Presentaci&oacute;n (PDF)</a>
+        <a class="boton sec" href="unidad6/actividad_svr.ipynb" download>Descargar notebook</a>
+        <a class="boton sec" data-colab="unidad6/actividad_svr.ipynb" href="#" aria-disabled="true">Abrir en Colab</a>
+      </div>
+      <p class="nota"><b>Actividad:</b> predecir el consumo el&eacute;ctrico diario de edificios a partir del clima y sus
+        caracter&iacute;sticas, donde la relaci&oacute;n con la temperatura es una curva en forma de U y no una l&iacute;nea recta;
+        comparar SVR lineal, polinomial y RBF frente a OLS, Ridge y Lasso. Trabajo individual, 60&ndash;75 minutos.
+        Los datos vienen incluidos como <code>consumo_energetico.csv</code> junto al notebook: no se necesita conexi&oacute;n a internet.</p>
+    </div>
+  </article>
+
   <p class="pronto">Las siguientes unidades se publicarán aquí conforme estén listas.</p>
 </main>
 
