@@ -30,6 +30,9 @@ mkdir -p unidad6
 cp -f ../v3/unidad6_svr.pdf unidad6/presentacion_unidad6_svr.pdf
 cp -f ../v3/notebooks/actividad_unidad6_svr.ipynb unidad6/actividad_svr.ipynb
 cp -f ../datos_sinteticos/consumo_energetico.csv unidad6/consumo_energetico.csv
+mkdir -p unidad7
+cp -f ../v3/unidad7_arboles_evaluacion.pdf unidad7/presentacion_unidad7_arboles_evaluacion.pdf
+cp -f ../v3/notebooks/actividad_unidad7_arboles_evaluacion.ipynb unidad7/actividad_arboles_evaluacion.ipynb
 mkdir -p curso
 cp -f ../Planeacion_Didactica_Aprendizaje_Supervisado.pdf curso/planeacion_didactica.pdf
 echo "Materiales sincronizados."
