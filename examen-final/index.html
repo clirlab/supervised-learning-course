@@ -179,6 +179,30 @@
   var btnSiguiente = document.getElementById("btn-siguiente");
   var timerId = null;
 
+  txtRespuesta.addEventListener("paste", function (e) {
+    e.preventDefault();
+    mostrarAvisoPegado();
+  });
+  txtRespuesta.addEventListener("drop", function (e) {
+    e.preventDefault();
+    mostrarAvisoPegado();
+  });
+  txtRespuesta.addEventListener("contextmenu", function (e) { e.preventDefault(); });
+  var avisoPegadoTimer = null;
+  function mostrarAvisoPegado() {
+    var el = document.getElementById("aviso-pegado");
+    if (!el) {
+      el = document.createElement("div");
+      el.id = "aviso-pegado";
+      el.className = "aviso error";
+      el.textContent = "No se permite pegar texto en esta pregunta. Escribe tu respuesta directamente.";
+      txtRespuesta.insertAdjacentElement("afterend", el);
+    }
+    el.hidden = false;
+    if (avisoPegadoTimer) clearTimeout(avisoPegadoTimer);
+    avisoPegadoTimer = setTimeout(function () { el.hidden = true; }, 3500);
+  }
+
   function fmt(s) {
     s = Math.max(0, Math.ceil(s));
     var m = Math.floor(s / 60), r = s % 60;
