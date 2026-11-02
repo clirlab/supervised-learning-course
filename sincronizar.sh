@@ -38,5 +38,4 @@ cp -f ../Planeacion_Didactica_Aprendizaje_Supervisado.pdf curso/planeacion_didac
 mkdir -p modulo2
 cp -f "../Examen Modulo 2 /Practica_Regresion_ML_Estabilidad_Redes.pdf" modulo2/practica_regresion_ml_estabilidad_redes.pdf
 cp -f "../Examen Modulo 2 /electrical_grid_stability_train.csv" modulo2/electrical_grid_stability_train.csv
-cp -f "../Examen Modulo 2 /electrical_grid_stability_test.csv" modulo2/electrical_grid_stability_test.csv
 echo "Materiales sincronizados."
