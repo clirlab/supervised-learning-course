@@ -38,4 +38,14 @@ cp -f ../Planeacion_Didactica_Aprendizaje_Supervisado.pdf curso/planeacion_didac
 mkdir -p modulo2
 cp -f "../Examen Modulo 2 /Practica_Regresion_ML_Estabilidad_Redes.pdf" modulo2/practica_regresion_ml_estabilidad_redes.pdf
 cp -f "../Examen Modulo 2 /electrical_grid_stability_train.csv" modulo2/electrical_grid_stability_train.csv
+mkdir -p unidad8
+cp -f ../v3/unidad8_regresion_logistica_knn.pdf unidad8/presentacion_unidad8_regresion_logistica_knn.pdf
+cp -f ../v3/notebooks/actividad_unidad8_spam_logistica_knn.ipynb unidad8/actividad_spam_logistica_knn.ipynb
+mkdir -p unidad9
+cp -f ../v3/unidad9_bayes_arboles_clasificacion.pdf unidad9/presentacion_unidad9_bayes_arboles_clasificacion.pdf
+cp -f ../v3/notebooks/actividad_unidad9_naive_bayes_texto.ipynb unidad9/actividad_naive_bayes_texto.ipynb
+cp -f ../v3/notebooks/actividad_unidad9_arboles_diabetes.ipynb unidad9/actividad_arboles_diabetes.ipynb
+mkdir -p unidad10
+cp -f ../v3/unidad10_svm_clasificacion.pdf unidad10/presentacion_unidad10_svm_clasificacion.pdf
+cp -f ../v3/notebooks/actividad_unidad10_svm_digitos.ipynb unidad10/actividad_svm_digitos.ipynb
 echo "Materiales sincronizados."

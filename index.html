@@ -304,6 +304,85 @@
     </div>
   </article>
 
+  <article class="unidad" id="unidad8">
+    <header>
+      <span class="num">Unidad 8</span>
+      <h3>Regresión logística y <i>k</i> vecinos más cercanos (kNN)</h3>
+    </header>
+    <div class="cuerpo">
+      <p><b>Temas:</b></p>
+      <ul>
+        <li>De la regresión lineal a la logística: la función sigmoide y la frontera de decisión.</li>
+        <li>Pérdida logarítmica (log-loss) y por qué no se entrena minimizando el MSE.</li>
+        <li>De binario a multiclase: uno contra el resto (OvR), uno contra uno (OvO) y softmax.</li>
+        <li><i>k</i> vecinos más cercanos: métricas de distancia, elección de <i>k</i> y la maldición de la dimensionalidad.</li>
+        <li>Matriz de confusión, exactitud, precisión, recall y F1.</li>
+      </ul>
+      <div class="botones">
+        <a class="boton" href="unidad8/presentacion_unidad8_regresion_logistica_knn.pdf">Presentación (PDF)</a>
+        <a class="boton sec" href="unidad8/actividad_spam_logistica_knn.ipynb" download>Descargar notebook</a>
+        <a class="boton sec" data-colab="unidad8/actividad_spam_logistica_knn.ipynb" href="#" aria-disabled="true">Abrir en Colab</a>
+      </div>
+      <p class="nota"><b>Actividad:</b> clasificar correos como spam o no spam comparando un <code>Pipeline</code> de
+        regresión logística contra uno de kNN (ambos con <code>StandardScaler</code>), eligiendo <code>C</code> y <i>k</i>
+        por validación cruzada y comparando ambos con <code>classification_report</code> y matriz de confusión. Trabajo
+        individual, 45–50 minutos. Los datos se generan dentro del notebook: no se necesita conexión a internet.</p>
+    </div>
+  </article>
+
+  <article class="unidad" id="unidad9">
+    <header>
+      <span class="num">Unidad 9</span>
+      <h3>Naive Bayes y árboles de clasificación</h3>
+    </header>
+    <div class="cuerpo">
+      <p><b>Temas:</b></p>
+      <ul>
+        <li>Del teorema de Bayes a un clasificador: el supuesto «naive» de independencia condicional.</li>
+        <li>Tres versiones de Naive Bayes según el tipo de variable: gaussiana, multinomial y Bernoulli.</li>
+        <li>De árboles de regresión a árboles de clasificación: impureza de Gini y ganancia de información (entropía).</li>
+        <li>Curva ROC y AUC: de probabilidades a clases, con el umbral de decisión.</li>
+      </ul>
+      <div class="botones">
+        <a class="boton" href="unidad9/presentacion_unidad9_bayes_arboles_clasificacion.pdf">Presentación (PDF)</a>
+        <a class="boton sec" href="unidad9/actividad_naive_bayes_texto.ipynb" download>Descargar notebook 1 (Naive Bayes)</a>
+        <a class="boton sec" data-colab="unidad9/actividad_naive_bayes_texto.ipynb" href="#" aria-disabled="true">Abrir notebook 1 en Colab</a>
+        <a class="boton sec" href="unidad9/actividad_arboles_diabetes.ipynb" download>Descargar notebook 2 (árboles)</a>
+        <a class="boton sec" data-colab="unidad9/actividad_arboles_diabetes.ipynb" href="#" aria-disabled="true">Abrir notebook 2 en Colab</a>
+      </div>
+      <p class="nota"><b>Actividad 1:</b> clasificar reseñas breves de cine y cocina con Naive Bayes multinomial y Bernoulli
+        (<code>CountVectorizer</code>), identificando las palabras más típicas de cada clase y clasificando documentos
+        propios. <b>Actividad 2:</b> diagnosticar diabetes con árboles de decisión (Gini y entropía), evaluando con curva
+        ROC y AUC contra un <code>GaussianNB</code>. Trabajo individual, 45 minutos cada una. Los datos se generan dentro
+        de cada notebook: no se necesita conexión a internet.</p>
+    </div>
+  </article>
+
+  <article class="unidad" id="unidad10">
+    <header>
+      <span class="num">Unidad 10</span>
+      <h3>Máquinas de vectores de soporte para clasificación (SVM)</h3>
+    </header>
+    <div class="cuerpo">
+      <p><b>Temas:</b></p>
+      <ul>
+        <li>La frontera con el margen más ancho y los vectores de soporte; el problema dual.</li>
+        <li>Margen blando: variables de holgura y el parámetro <i>C</i>.</li>
+        <li>El truco del kernel para datos no separables; kernels lineal, polinomial y RBF, y el parámetro <i>&gamma;</i>.</li>
+        <li>De binario a multiclase; consejos prácticos para conjuntos de datos grandes (<code>SVC</code> vs <code>LinearSVC</code>).</li>
+      </ul>
+      <div class="botones">
+        <a class="boton" href="unidad10/presentacion_unidad10_svm_clasificacion.pdf">Presentación (PDF)</a>
+        <a class="boton sec" href="unidad10/actividad_svm_digitos.ipynb" download>Descargar notebook</a>
+        <a class="boton sec" data-colab="unidad10/actividad_svm_digitos.ipynb" href="#" aria-disabled="true">Abrir en Colab</a>
+      </div>
+      <p class="nota"><b>Actividad:</b> reconocer dígitos manuscritos (8×8 píxeles, vía <code>sklearn.datasets.load_digits</code>)
+        comparando SVM con kernel lineal y RBF, ajustando <code>C</code> y <i>&gamma;</i> con <code>GridSearchCV</code> y
+        analizando qué dígitos se confunden más entre sí. Trabajo individual, 45 minutos. Los datos vienen incluidos en
+        scikit-learn: no se necesita conexión a internet.</p>
+    </div>
+  </article>
+
   <article class="unidad" id="examen-final">
     <header>
       <span class="num">Examen final</span>
