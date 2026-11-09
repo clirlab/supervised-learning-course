@@ -387,26 +387,21 @@
   <article class="unidad" id="unidad11">
     <header>
       <span class="num">Unidad 11</span>
-      <h3>Ensambles: bagging, Random Forests y boosting</h3>
+      <h3>Introducción a redes neuronales (MLP)</h3>
     </header>
     <div class="cuerpo">
       <p><b>Temas:</b></p>
       <ul>
-        <li>Bagging: remuestreo <i>bootstrap</i> y <i>bootstrap aggregating</i>; <code>BaggingClassifier</code> / <code>BaggingRegressor</code>.</li>
-        <li>Random Forests: aleatoriedad extra en los cortes, error <i>out-of-bag</i>, <code>feature_importances_</code> y dependencia parcial.</li>
-        <li>Boosting en serie: AdaBoost (pesos y <i>&alpha;</i>) y Gradient Boosting (descenso de gradiente funcional).</li>
-        <li>XGBoost: boosting regularizado con aproximación de Taylor de segundo orden; cuándo usar cada variante.</li>
+        <li>El perceptrón y su límite (XOR no es separable linealmente); de ahí a la arquitectura MLP y el <i>forward pass</i>.</li>
+        <li>Funciones de activación: sigmoide, ReLU y softmax (capa de salida multiclase).</li>
+        <li>Backpropagation: la regla de la cadena y el descenso de gradiente para actualizar los pesos.</li>
+        <li><code>MLPClassifier</code> en scikit-learn: hiperparámetros clave, <code>early_stopping</code> y la importancia de escalar los datos.</li>
       </ul>
       <div class="botones">
-        <a class="boton" href="unidad11/presentacion_unidad11_ensambles.pdf">Presentación (PDF)</a>
-        <a class="boton sec" href="unidad11/actividad_ensambles.ipynb" download>Descargar notebook</a>
-        <a class="boton sec" data-colab="unidad11/actividad_ensambles.ipynb" href="#" aria-disabled="true">Abrir en Colab</a>
+        <a class="boton" href="unidad11/presentacion_unidad11_redes_neuronales.pdf">Presentación (PDF)</a>
       </div>
-      <p class="nota"><b>Actividad:</b> sobre un mismo conjunto sintético de clasificación (800 observaciones, 10 variables,
-        solo 5 informativas), comparas un árbol sin podar contra bagging, Random Forest, AdaBoost y Gradient Boosting,
-        grafican el error OOB y el error de boosting contra el número de árboles, interpretas <code>feature_importances_</code>
-        y cierras con una tabla comparativa y tu recomendación de modelo. Trabajo individual, 60–75 minutos. Los datos se
-        generan dentro del notebook: no se necesita conexión a internet.</p>
+      <p class="nota"><b>Actividad:</b> clasificador <code>MLPClassifier</code> sobre un subconjunto de Fashion-MNIST, comparando
+        arquitecturas y valores de <code>alpha</code> — <i>en preparación, próximamente disponible para descargar.</i></p>
     </div>
   </article>
 
@@ -439,21 +434,51 @@
   <article class="unidad" id="unidad13">
     <header>
       <span class="num">Unidad 13</span>
-      <h3>Introducción a redes neuronales (MLP)</h3>
+      <h3>Bagging y bosques aleatorios</h3>
     </header>
     <div class="cuerpo">
       <p><b>Temas:</b></p>
       <ul>
-        <li>El perceptrón y su límite (XOR no es separable linealmente); de ahí a la arquitectura MLP y el <i>forward pass</i>.</li>
-        <li>Funciones de activación: sigmoide, ReLU y softmax (capa de salida multiclase).</li>
-        <li>Backpropagation: la regla de la cadena y el descenso de gradiente para actualizar los pesos.</li>
-        <li><code>MLPClassifier</code> en scikit-learn: hiperparámetros clave, <code>early_stopping</code> y la importancia de escalar los datos.</li>
+        <li>Panorama de ensambles: combinar modelos en paralelo (bagging) frente a en serie (boosting) o con un meta-modelo (stacking).</li>
+        <li>Bagging: remuestreo <i>bootstrap</i> y <i>bootstrap aggregating</i>; <code>BaggingClassifier</code> / <code>BaggingRegressor</code>.</li>
+        <li>Random Forests: aleatoriedad extra en los cortes, error <i>out-of-bag</i>, <code>feature_importances_</code> y dependencia parcial.</li>
+        <li>Qué se gana y qué se pierde al pasar de un árbol solo a un bosque aleatorio.</li>
       </ul>
       <div class="botones">
-        <a class="boton" href="unidad13/presentacion_unidad13_redes_neuronales.pdf">Presentación (PDF)</a>
+        <a class="boton" href="unidad13/presentacion_unidad13_bagging_rf.pdf">Presentación (PDF)</a>
+        <a class="boton sec" href="unidad13/actividad_bagging_rf.ipynb" download>Descargar notebook</a>
+        <a class="boton sec" data-colab="unidad13/actividad_bagging_rf.ipynb" href="#" aria-disabled="true">Abrir en Colab</a>
       </div>
-      <p class="nota"><b>Actividad:</b> clasificador <code>MLPClassifier</code> sobre un subconjunto de Fashion-MNIST, comparando
-        arquitecturas y valores de <code>alpha</code> — <i>en preparación, próximamente disponible para descargar.</i></p>
+      <p class="nota"><b>Actividad:</b> sobre un conjunto sintético de clasificación (800 observaciones, 10 variables, solo 5
+        informativas), comparas un árbol sin podar contra bagging y Random Forest, grafican el error OOB contra el número de
+        árboles, interpretas <code>feature_importances_</code> y cierras con una tabla comparativa y tu recomendación de
+        modelo. Trabajo individual, 45–60 minutos. Los datos se generan dentro del notebook: no se necesita conexión a
+        internet.</p>
+    </div>
+  </article>
+
+  <article class="unidad" id="unidad14">
+    <header>
+      <span class="num">Unidad 14</span>
+      <h3>Boosting: AdaBoost, Gradient Boosting y XGBoost</h3>
+    </header>
+    <div class="cuerpo">
+      <p><b>Temas:</b></p>
+      <ul>
+        <li>Boosting en serie: AdaBoost (pesos adaptativos y <i>&alpha;</i>) frente al bagging/Random Forest de la Unidad 13.</li>
+        <li>Gradient Boosting: descenso de gradiente funcional, ajuste de árboles a los residuos.</li>
+        <li>XGBoost: regularización, <i>column subsampling</i> y aproximación de Taylor de segundo orden.</li>
+        <li>Comparación: cuándo preferir cada variante.</li>
+      </ul>
+      <div class="botones">
+        <a class="boton" href="unidad14/presentacion_unidad14_boosting.pdf">Presentación (PDF)</a>
+        <a class="boton sec" href="unidad14/actividad_boosting.ipynb" download>Descargar notebook</a>
+        <a class="boton sec" data-colab="unidad14/actividad_boosting.ipynb" href="#" aria-disabled="true">Abrir en Colab</a>
+      </div>
+      <p class="nota"><b>Actividad:</b> sobre el mismo tipo de conjunto sintético de la Unidad 13, entrenas AdaBoost y ajustas
+        Gradient Boosting con <code>GridSearchCV</code>, comparándolos contra el Random Forest de referencia de la sesión
+        anterior en una tabla final de exactitud y tiempo de entrenamiento. Trabajo individual, 45–60 minutos. Los datos se
+        generan dentro del notebook: no se necesita conexión a internet.</p>
     </div>
   </article>
 
