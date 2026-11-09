@@ -384,6 +384,79 @@
     </div>
   </article>
 
+  <article class="unidad" id="unidad11">
+    <header>
+      <span class="num">Unidad 11</span>
+      <h3>Ensambles: bagging, Random Forests y boosting</h3>
+    </header>
+    <div class="cuerpo">
+      <p><b>Temas:</b></p>
+      <ul>
+        <li>Bagging: remuestreo <i>bootstrap</i> y <i>bootstrap aggregating</i>; <code>BaggingClassifier</code> / <code>BaggingRegressor</code>.</li>
+        <li>Random Forests: aleatoriedad extra en los cortes, error <i>out-of-bag</i>, <code>feature_importances_</code> y dependencia parcial.</li>
+        <li>Boosting en serie: AdaBoost (pesos y <i>&alpha;</i>) y Gradient Boosting (descenso de gradiente funcional).</li>
+        <li>XGBoost: boosting regularizado con aproximación de Taylor de segundo orden; cuándo usar cada variante.</li>
+      </ul>
+      <div class="botones">
+        <a class="boton" href="unidad11/presentacion_unidad11_ensambles.pdf">Presentación (PDF)</a>
+        <a class="boton sec" href="unidad11/actividad_ensambles.ipynb" download>Descargar notebook</a>
+        <a class="boton sec" data-colab="unidad11/actividad_ensambles.ipynb" href="#" aria-disabled="true">Abrir en Colab</a>
+      </div>
+      <p class="nota"><b>Actividad:</b> sobre un mismo conjunto sintético de clasificación (800 observaciones, 10 variables,
+        solo 5 informativas), comparas un árbol sin podar contra bagging, Random Forest, AdaBoost y Gradient Boosting,
+        grafican el error OOB y el error de boosting contra el número de árboles, interpretas <code>feature_importances_</code>
+        y cierras con una tabla comparativa y tu recomendación de modelo. Trabajo individual, 60–75 minutos. Los datos se
+        generan dentro del notebook: no se necesita conexión a internet.</p>
+    </div>
+  </article>
+
+  <article class="unidad" id="unidad12">
+    <header>
+      <span class="num">Unidad 12</span>
+      <h3>Evaluación de modelos y ajuste de hiperparámetros</h3>
+    </header>
+    <div class="cuerpo">
+      <p><b>Temas:</b></p>
+      <ul>
+        <li>Más allá de la exactitud con clases desbalanceadas: MCC, kappa de Cohen y log-loss.</li>
+        <li>Estrategias contra el desbalance: sobre/submuestreo, SMOTE y <code>class_weight</code>.</li>
+        <li>Búsqueda de hiperparámetros: <code>GridSearchCV</code>, <code>RandomizedSearchCV</code>, <code>HalvingGridSearchCV</code> y una introducción a Optuna.</li>
+        <li>Calibración de probabilidades: diagramas de confiabilidad, <i>Platt scaling</i> y regresión isotónica con <code>CalibratedClassifierCV</code>.</li>
+      </ul>
+      <div class="botones">
+        <a class="boton" href="unidad12/presentacion_unidad12_evaluacion_hiperparametros.pdf">Presentación (PDF)</a>
+        <a class="boton sec" href="unidad12/actividad_evaluacion_hiperparametros.ipynb" download>Descargar notebook</a>
+        <a class="boton sec" data-colab="unidad12/actividad_evaluacion_hiperparametros.ipynb" href="#" aria-disabled="true">Abrir en Colab</a>
+      </div>
+      <p class="nota"><b>Actividad:</b> flujo completo de evaluación sobre un conjunto sintético y desbalanceado de detección
+        de fraude (5000 transacciones, ~2% positivas): comparas exactitud contra MCC/kappa, calculas log-loss, aplicas y
+        comparas tres estrategias de desbalance, ajustas hiperparámetros con <code>GridSearchCV</code> y
+        <code>RandomizedSearchCV</code>, y calibras las probabilidades del modelo final. Trabajo individual, 70–90 minutos.
+        Los datos se generan dentro del notebook: no se necesita conexión a internet.</p>
+    </div>
+  </article>
+
+  <article class="unidad" id="unidad13">
+    <header>
+      <span class="num">Unidad 13</span>
+      <h3>Introducción a redes neuronales (MLP)</h3>
+    </header>
+    <div class="cuerpo">
+      <p><b>Temas:</b></p>
+      <ul>
+        <li>El perceptrón y su límite (XOR no es separable linealmente); de ahí a la arquitectura MLP y el <i>forward pass</i>.</li>
+        <li>Funciones de activación: sigmoide, ReLU y softmax (capa de salida multiclase).</li>
+        <li>Backpropagation: la regla de la cadena y el descenso de gradiente para actualizar los pesos.</li>
+        <li><code>MLPClassifier</code> en scikit-learn: hiperparámetros clave, <code>early_stopping</code> y la importancia de escalar los datos.</li>
+      </ul>
+      <div class="botones">
+        <a class="boton" href="unidad13/presentacion_unidad13_redes_neuronales.pdf">Presentación (PDF)</a>
+      </div>
+      <p class="nota"><b>Actividad:</b> clasificador <code>MLPClassifier</code> sobre un subconjunto de Fashion-MNIST, comparando
+        arquitecturas y valores de <code>alpha</code> — <i>en preparación, próximamente disponible para descargar.</i></p>
+    </div>
+  </article>
+
   <p class="pronto">Las siguientes unidades se publicarán aquí conforme estén listas.</p>
 </main>
 

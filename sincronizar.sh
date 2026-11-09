@@ -48,4 +48,14 @@ cp -f ../v3/notebooks/actividad_unidad9_arboles_diabetes.ipynb unidad9/actividad
 mkdir -p unidad10
 cp -f ../v3/unidad10_svm_clasificacion.pdf unidad10/presentacion_unidad10_svm_clasificacion.pdf
 cp -f ../v3/notebooks/actividad_unidad10_svm_digitos.ipynb unidad10/actividad_svm_digitos.ipynb
+mkdir -p unidad11
+cp -f ../v3/unidad11_ensambles.pdf unidad11/presentacion_unidad11_ensambles.pdf
+cp -f ../v3/notebooks/actividad_unidad11_ensambles.ipynb unidad11/actividad_ensambles.ipynb
+mkdir -p unidad12
+cp -f ../v3/unidad12_evaluacion_hiperparametros.pdf unidad12/presentacion_unidad12_evaluacion_hiperparametros.pdf
+cp -f ../v3/notebooks/actividad_unidad12_evaluacion_hiperparametros.ipynb unidad12/actividad_evaluacion_hiperparametros.ipynb
+mkdir -p unidad13
+cp -f ../v3/unidad13_redes_neuronales.pdf unidad13/presentacion_unidad13_redes_neuronales.pdf
+# TODO: falta el notebook de la actividad de la Unidad 13 (MLP / Fashion-MNIST); descomentar cuando exista:
+# cp -f ../v3/notebooks/actividad_unidad13_redes_neuronales.ipynb unidad13/actividad_redes_neuronales.ipynb
 echo "Materiales sincronizados."
