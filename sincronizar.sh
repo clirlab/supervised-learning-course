@@ -52,6 +52,7 @@ mkdir -p unidad11
 cp -f ../v3/unidad11_redes_neuronales.pdf unidad11/presentacion_unidad11_redes_neuronales.pdf
 cp -f ../v3/notebooks/actividad_unidad11_redes_neuronales.ipynb unidad11/actividad_redes_neuronales.ipynb
 cp -f ../v3/notebooks/fashion_mnist_subset.npz unidad11/fashion_mnist_subset.npz
+cp -f ../v3/notebooks/ejemplo_mlp_desde_cero.ipynb unidad11/ejemplo_mlp_desde_cero.ipynb
 mkdir -p unidad12
 cp -f ../v3/unidad12_evaluacion_hiperparametros.pdf unidad12/presentacion_unidad12_evaluacion_hiperparametros.pdf
 cp -f ../v3/notebooks/actividad_unidad12_evaluacion_hiperparametros.ipynb unidad12/actividad_evaluacion_hiperparametros.ipynb

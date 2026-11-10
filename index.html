@@ -401,6 +401,8 @@
         <a class="boton" href="unidad11/presentacion_unidad11_redes_neuronales.pdf">Presentación (PDF)</a>
         <a class="boton sec" href="unidad11/actividad_redes_neuronales.ipynb" download>Descargar notebook</a>
         <a class="boton sec" data-colab="unidad11/actividad_redes_neuronales.ipynb" href="#" aria-disabled="true">Abrir en Colab</a>
+        <a class="boton sec" href="unidad11/ejemplo_mlp_desde_cero.ipynb" download>Ejemplo: MLP desde cero (sin scikit-learn)</a>
+        <a class="boton sec" data-colab="unidad11/ejemplo_mlp_desde_cero.ipynb" href="#" aria-disabled="true">Abrir en Colab</a>
       </div>
       <p class="nota"><b>Actividad:</b> clasificador <code>MLPClassifier</code> sobre un subconjunto de Fashion-MNIST
         (4000 imágenes de entrenamiento, 1000 de prueba, 10 clases de prendas de vestir): escalas los píxeles, entrenas
@@ -408,6 +410,9 @@
         <code>batch_size</code> y <code>learning_rate_init</code> en la curva de pérdida, y cierras con un modelo final con
         <code>early_stopping</code> y su matriz de confusión. Trabajo individual, 70–90 minutos. Los datos (<code>fashion_mnist_subset.npz</code>)
         se descargan junto con el notebook: no se necesita conexión a internet durante la actividad.</p>
+      <p class="nota"><b>Ejemplo complementario:</b> implementación de un MLP <i>desde cero</i> con NumPy (sin scikit-learn):
+        forward pass, backpropagation y descenso de gradiente escritos explícitamente, entrenado sobre XOR. Útil para
+        ver en código lo que la Unidad C de la presentación describe con fórmulas.</p>
     </div>
   </article>
 
