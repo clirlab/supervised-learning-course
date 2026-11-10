@@ -38,6 +38,9 @@ cp -f ../Planeacion_Didactica_Aprendizaje_Supervisado.pdf curso/planeacion_didac
 mkdir -p modulo2
 cp -f "../Examen Modulo 2 /Practica_Regresion_ML_Estabilidad_Redes.pdf" modulo2/practica_regresion_ml_estabilidad_redes.pdf
 cp -f "../Examen Modulo 2 /electrical_grid_stability_train.csv" modulo2/electrical_grid_stability_train.csv
+
+mkdir -p modulo3
+cp -f "../Examen Modulo 3/Practica_Evaluacion_Modelos_Datos_Desbalanceados.pdf" modulo3/practica_evaluacion_modelos_datos_desbalanceados.pdf
 mkdir -p unidad8
 cp -f ../v3/unidad8_regresion_logistica_knn.pdf unidad8/presentacion_unidad8_regresion_logistica_knn.pdf
 cp -f ../v3/notebooks/actividad_unidad8_spam_logistica_knn.ipynb unidad8/actividad_spam_logistica_knn.ipynb

@@ -442,6 +442,40 @@
     </div>
   </article>
 
+    <article class="unidad" id="modulo3">
+    <header>
+      <span class="num">Módulo 3</span>
+      <h3>Entrega del examen · Modelos de clasificación</h3>
+    </header>
+    <div class="cuerpo">
+      <p><b>Evaluación de modelos con datos desbalanceados:</b></p>
+      <ul>
+        <li>Análisis de un dataset simulado y desbalanceado (detección de fallas industriales) generado por el propio estudiante con <code>make_classification</code>.</li>
+        <li>Entrenamiento de un solo modelo (propuesto por el estudiante) y reporte de resultados con MCC o kappa, no solo <i>accuracy</i>.</li>
+        <li>Comparación de cuatro estrategias para el desbalance: oversampling, undersampling, SMOTE y <code>class_weight="balanced"</code>.</li>
+        <li>Calibración final de las probabilidades del modelo elegido y su curva de calibración.</li>
+      </ul>
+      <div class="botones">
+        <a class="boton" href="modulo3/practica_evaluacion_modelos_datos_desbalanceados.pdf">Instrucciones del examen (PDF)</a>
+        <a class="boton sec" id="btn-formulario-m3" href="#" hidden target="_blank" rel="noopener">Formulario de entrega del examen</a>
+      </div>
+      <p><b>Fecha límite de entrega: [FECHA].</b></p>
+
+      <h4>Cómo entregar el examen</h4>
+      <ol class="pasos">
+        <li>Resuelve el examen de forma individual en tu propio notebook. Copia exactamente el bloque de código con <code>make_classification</code> (incluyendo <code>random_state=42</code>) que viene en las instrucciones, para que tu dataset y tu partición de entrenamiento/prueba sean idénticos a los de tus compañeros.</li>
+        <li>Entrena el modelo propuesto, reporta los resultados con MCC o kappa y compara las cuatro estrategias para el desbalance con una tabla comparativa y tu recomendación final.</li>
+        <li>Calibra las probabilidades del modelo elegido (por ejemplo con <code>CalibratedClassifierCV</code>) y muestra la curva de calibración antes y después.</li>
+        <li>Antes de entregar ejecuta <b>Kernel → Reiniciar y ejecutar todo</b> (en Colab: <i>Entorno de ejecución → Ejecutar todo</i>). El notebook debe correr de principio a fin sin errores.</li>
+        <li>Descarga el notebook como <code>.ipynb</code> y nómbralo <code>Apellido_Nombre_Examen_Modulo3.ipynb</code>.</li>
+        <li>Abre el formulario de entrega e inicia sesión con tu cuenta de Google (es necesario para subir archivos).</li>
+        <li>Escribe tu nombre completo y tu correo institucional o matrícula, sube <b>un solo archivo</b> (máximo 10 MB) y envía.</li>
+        <li>Verifica que recibiste la confirmación de envío. Puedes reenviar antes de la fecha límite; se revisa el último envío.</li>
+      </ol>
+      <p class="nota">Solo se acepta el archivo <code>.ipynb</code> (no PDF ni capturas). El examen no requiere descargar ningún archivo de datos: el dataset se genera dentro del propio notebook con el código indicado en las instrucciones.</p>
+    </div>
+  </article>
+
   <article class="unidad" id="unidad13">
     <header>
       <span class="num">Unidad 13</span>
@@ -536,6 +570,8 @@ var FORM_URL = "https://forms.gle/QnkZYco2EFLUYiuD8";
 /* Pega aquí la dirección pública del formulario del examen del Módulo 2 cuando esté publicado; mientras esté vacía, el botón permanece oculto. */
 var FORM_URL_M2 = "https://forms.gle/4TRwhUbqJoGmpm89A";
 (function () { var b = document.getElementById('btn-formulario-m2'); if (b && FORM_URL_M2) { b.href = FORM_URL_M2; b.hidden = false; } })();
+var FORM_URL_M3 = "";
+(function () { var b = document.getElementById('btn-formulario-m3'); if (b && FORM_URL_M3) { b.href = FORM_URL_M3; b.hidden = false; } })();
 </script>
 </body>
 </html>
