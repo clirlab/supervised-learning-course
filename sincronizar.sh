@@ -50,8 +50,8 @@ cp -f ../v3/unidad10_svm_clasificacion.pdf unidad10/presentacion_unidad10_svm_cl
 cp -f ../v3/notebooks/actividad_unidad10_svm_digitos.ipynb unidad10/actividad_svm_digitos.ipynb
 mkdir -p unidad11
 cp -f ../v3/unidad11_redes_neuronales.pdf unidad11/presentacion_unidad11_redes_neuronales.pdf
-# TODO: falta el notebook de la actividad de la Unidad 11 (MLP / Fashion-MNIST); descomentar cuando exista:
-# cp -f ../v3/notebooks/actividad_unidad11_redes_neuronales.ipynb unidad11/actividad_redes_neuronales.ipynb
+cp -f ../v3/notebooks/actividad_unidad11_redes_neuronales.ipynb unidad11/actividad_redes_neuronales.ipynb
+cp -f ../v3/notebooks/fashion_mnist_subset.npz unidad11/fashion_mnist_subset.npz
 mkdir -p unidad12
 cp -f ../v3/unidad12_evaluacion_hiperparametros.pdf unidad12/presentacion_unidad12_evaluacion_hiperparametros.pdf
 cp -f ../v3/notebooks/actividad_unidad12_evaluacion_hiperparametros.ipynb unidad12/actividad_evaluacion_hiperparametros.ipynb
