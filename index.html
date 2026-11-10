@@ -459,11 +459,16 @@
         <a class="boton" href="unidad13/presentacion_unidad13_bagging_rf.pdf">Presentación (PDF)</a>
         <a class="boton sec" href="unidad13/actividad_bagging_rf.ipynb" download>Descargar notebook</a>
         <a class="boton sec" data-colab="unidad13/actividad_bagging_rf.ipynb" href="#" aria-disabled="true">Abrir en Colab</a>
+        <a class="boton sec" href="unidad13/ejemplo_bagging_desde_cero.ipynb" download>Ejemplo: Bagging desde cero</a>
+        <a class="boton sec" data-colab="unidad13/ejemplo_bagging_desde_cero.ipynb" href="#" aria-disabled="true">Abrir en Colab</a>
       </div>
       <p class="nota"><b>Actividad:</b> sobre un conjunto sintético de clasificación, comparas un árbol sin podar contra
         bagging y Random Forest, grafican el error OOB contra el número de árboles, interpretas
         <code>feature_importances_</code> y cierras con una tabla comparativa y tu recomendación de modelo. Trabajo
         individual. Los datos se generan dentro del notebook: no se necesita conexión a internet.</p>
+      <p class="nota"><b>Ejemplo complementario:</b> implementación de bagging desde cero (remuestreo bootstrap +
+        votación/promedio de los modelos base), sin usar <code>BaggingClassifier</code>, para ver el mecanismo por
+        dentro.</p>
     </div>
   </article>
 
@@ -484,11 +489,18 @@
         <a class="boton" href="unidad14/presentacion_unidad14_boosting.pdf">Presentación (PDF)</a>
         <a class="boton sec" href="unidad14/actividad_boosting.ipynb" download>Descargar notebook</a>
         <a class="boton sec" data-colab="unidad14/actividad_boosting.ipynb" href="#" aria-disabled="true">Abrir en Colab</a>
+        <a class="boton sec" href="unidad14/ejemplo_adaboost_desde_cero.ipynb" download>Ejemplo: AdaBoost desde cero</a>
+        <a class="boton sec" data-colab="unidad14/ejemplo_adaboost_desde_cero.ipynb" href="#" aria-disabled="true">Abrir en Colab</a>
+        <a class="boton sec" href="unidad14/ejemplo_gradient_boosting_desde_cero.ipynb" download>Ejemplo: Gradient Boosting desde cero</a>
+        <a class="boton sec" data-colab="unidad14/ejemplo_gradient_boosting_desde_cero.ipynb" href="#" aria-disabled="true">Abrir en Colab</a>
       </div>
       <p class="nota"><b>Actividad:</b> sobre el mismo tipo de conjunto sintético de la Unidad 13, entrenas y comparas
         AdaBoost y Gradient Boosting contra el Random Forest de la actividad anterior, y cierras con una tabla
         comparativa y tu recomendación de modelo. Trabajo individual. Los datos se generan dentro del notebook: no se
         necesita conexión a internet.</p>
+      <p class="nota"><b>Ejemplos complementarios:</b> implementaciones desde cero de AdaBoost (pesos por dato,
+        <i>&alpha;</i><sub>m</sub> y actualización de pesos) y de Gradient Boosting (ajuste sucesivo de árboles a los residuos), sin
+        usar <code>AdaBoostClassifier</code> ni <code>GradientBoostingClassifier</code>.</p>
     </div>
   </article>
 

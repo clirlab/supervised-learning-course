@@ -59,7 +59,10 @@ cp -f ../v3/notebooks/actividad_unidad12_evaluacion_hiperparametros.ipynb unidad
 mkdir -p unidad13
 cp -f ../v3/unidad13_bagging_rf.pdf unidad13/presentacion_unidad13_bagging_rf.pdf
 cp -f ../v3/notebooks/actividad_unidad13_bagging_rf.ipynb unidad13/actividad_bagging_rf.ipynb
+cp -f "../v3/notebooks/Bagging_from_scratch.ipynb" unidad13/ejemplo_bagging_desde_cero.ipynb
 mkdir -p unidad14
 cp -f ../v3/unidad14_boosting.pdf unidad14/presentacion_unidad14_boosting.pdf
 cp -f ../v3/notebooks/actividad_unidad14_boosting.ipynb unidad14/actividad_boosting.ipynb
+cp -f "../v3/notebooks/AdaBoost_from_scratch-tarea.ipynb" unidad14/ejemplo_adaboost_desde_cero.ipynb
+cp -f "../v3/notebooks/GradientBoosting_from_scratch.ipynb" unidad14/ejemplo_gradient_boosting_desde_cero.ipynb
 echo "Materiales sincronizados."
