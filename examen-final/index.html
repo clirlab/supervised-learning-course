@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Examen final · Preguntas abiertas (Unidades 1-7)</title>
-<meta name="description" content="Examen de preguntas abiertas con tiempo límite por pregunta, Aprendizaje Supervisado.">
+<title>Evaluación de Conocimientos Adquiridos · Preguntas abiertas (Unidades 1-14)</title>
+<meta name="description" content="Evaluación opcional de preguntas abiertas con tiempo límite por pregunta, Aprendizaje Supervisado.">
 <link rel="stylesheet" href="../assets/estilo.css">
 <style>
   main.examen{max-width:720px}
@@ -40,8 +40,8 @@
 <header class="portada">
   <div class="contenedor">
     <span class="etiqueta">Aprendizaje Supervisado</span>
-    <h1>Examen final · Preguntas abiertas</h1>
-    <p>Unidades 1 a 7 · 10 preguntas · 5 minutos por pregunta</p>
+    <h1>Evaluación de Conocimientos Adquiridos</h1>
+    <p>Unidades 1 a 14 · 15 preguntas · 5 minutos por pregunta</p>
   </div>
 </header>
 
@@ -50,12 +50,20 @@
   <!-- ===================== PANTALLA 0: datos del estudiante ===================== -->
   <section id="pantalla-inicio" class="tarjeta">
     <h1 class="tit">Antes de empezar</h1>
-    <p class="sub">Vas a responder <b>10 preguntas abiertas</b>. Cada pregunta tiene un <b>cronómetro de 5 minutos</b>: cuando
-      se agota, tu respuesta se bloquea tal como quedó y el examen avanza solo a la siguiente pregunta. No puedes regresar
-      a una pregunta anterior. El examen completo dura 50 minutos.</p>
-    <div class="aviso">No cierres ni recargues esta pestaña a propósito: si lo haces por accidente, tu progreso y el tiempo
-      restante de la pregunta actual se conservan (el cronómetro sigue corriendo en segundo plano), pero evita salir de aquí
-      sin necesidad. Trabajo individual.</div>
+    <p class="sub">Vas a responder <b>15 preguntas abiertas</b>: 14 cubren los temas de todo el curso (Unidades 1 a 14) y la
+      última te pide tu opinión sobre el curso. Cada pregunta tiene un <b>cronómetro de 5 minutos</b>: cuando se agota, tu
+      respuesta se bloquea tal como quedó y la evaluación avanza sola a la siguiente pregunta. No puedes regresar a una
+      pregunta anterior. La evaluación completa dura 75 minutos.</p>
+    <div class="aviso aviso-puntos"><b>Responder es opcional.</b> Quienes la respondan y lo hagan adecuadamente pueden
+      obtener <b>hasta 5 puntos extra</b> sobre su calificación final de la asignatura.</div>
+    <div class="aviso"><b>Fecha límite para responder: domingo 15 de noviembre, 11:00 pm.</b> Después de esa hora ya no
+      se aceptan respuestas.</div>
+    <div class="aviso">La última pregunta no se califica como conocimiento técnico: es retroalimentación sobre el curso
+      (qué te pareció bien, qué te pareció mal y qué sugerirías mejorar). Respóndela con la misma honestidad que el resto.</div>
+    <div class="aviso error"><b>Una vez que inicias, no puedes pausar ni reintentar.</b> Solo se admite un intento por
+      persona: no cierres ni recargues esta pestaña a propósito (si lo haces por accidente, tu progreso y el tiempo
+      restante de la pregunta actual se conservan, pero el cronómetro sigue corriendo en segundo plano). Trabajo
+      individual.</div>
     <div class="campo">
       <label for="in-nombre">Nombre completo</label>
       <input type="text" id="in-nombre" autocomplete="name" placeholder="Apellido(s) Nombre(s)">
@@ -65,8 +73,15 @@
       <input type="text" id="in-matricula" autocomplete="email" placeholder="correo@uady.edu.mx o matrícula">
     </div>
     <div class="acciones">
-      <button class="boton" id="btn-comenzar">Comenzar examen</button>
+      <button class="boton" id="btn-comenzar">Comenzar evaluación</button>
     </div>
+  </section>
+
+  <!-- ===================== PANTALLA X: plazo vencido ===================== -->
+  <section id="pantalla-vencido" class="tarjeta" hidden>
+    <h1 class="tit">⏱ Plazo vencido</h1>
+    <p class="sub">La fecha límite para responder esta evaluación (domingo 15 de noviembre, 11:00 pm) ya pasó. Ya no se
+      aceptan respuestas.</p>
   </section>
 
   <!-- ===================== PANTALLA 1: preguntas ===================== -->
@@ -111,7 +126,7 @@
 </main>
 
 <footer>
-  <div class="contenedor">Examen final · Aprendizaje Supervisado.</div>
+  <div class="contenedor">Evaluación de Conocimientos Adquiridos · Aprendizaje Supervisado.</div>
 </footer>
 
 <!-- iframe oculto para enviar al Google Form sin salir de esta página -->
@@ -123,16 +138,21 @@
 
   // -------------------------------------------------------------- Preguntas --
   var PREGUNTAS = [
-    {u:"Unidad 1 · EDA", t:"Un conjunto de datos de viviendas tiene una variable de precio con asimetría positiva fuerte y varios valores “tope” (censurados en un máximo artificial, como 500,000). Explica cómo detectarías esta censura con herramientas de EDA, por qué un boxplot o la regla del IQR por sí solos pueden confundirte con datos censurados, y qué decisión tomarías para el modelado (eliminar, transformar o tratar aparte esas filas)."},
-    {u:"Unidad 2 · Preprocesamiento", t:"Explica, con un ejemplo concreto, la diferencia entre un mecanismo de datos faltantes MCAR, MAR y MNAR, y por qué esta distinción cambia tu estrategia de imputación. Después, describe qué fuga de datos ocurriría si imputas y escalas antes de dividir en entrenamiento/prueba, y cómo lo evitarías con un Pipeline."},
-    {u:"Unidad 2-3 · Codificación y selección", t:"Tienes una variable categórica nominal con 20 categorías, una de ellas muy rara (menos del 1% de los datos). Compara las consecuencias de codificarla con enteros arbitrarios frente a one-hot encoding en un modelo lineal, y explica qué problema adicional introduce la categoría rara al dividir en entrenamiento/prueba y cómo lo resolverías."},
-    {u:"Unidad 3 · Selección de variables", t:"Compara un método de filtro (como SelectKBest con F de ANOVA), un método de envoltura (RFE) y un método integrado (Lasso) para seleccionar variables: ¿qué tipo de relación con el objetivo puede pasar por alto cada uno, qué costo computacional tiene y cuál usarías si sospechas que hay variables redundantes entre sí?"},
-    {u:"Unidad 4 · Regresión lineal/polinomial", t:"Al ajustar una regresión polinomial de grado alto a un conjunto de datos pequeño, la curva de entrenamiento se ajusta casi perfectamente pero el error en prueba es mucho mayor. Explica este fenómeno en términos de sesgo y varianza, y describe dos estrategias distintas (no necesariamente regularización) para corregirlo."},
-    {u:"Unidad 4 · Optimización", t:"Explica por qué SGDRegressor (descenso de gradiente) requiere escalar las variables numéricas mientras que la solución cerrada de mínimos cuadrados (OLS) no lo requiere estrictamente. ¿Qué pasaría con la convergencia del descenso de gradiente si una variable está en una escala mucho mayor que las demás?"},
-    {u:"Unidad 5 · Regularización", t:"Compara Ridge (L2) y Lasso (L1) en un escenario con muchas variables, varias de ellas correlacionadas entre sí y otras puramente ruido: ¿cuál tiende a producir un modelo más interpretable y por qué?, ¿cuál maneja mejor la multicolinealidad? Explica además qué le pasa a los coeficientes de Lasso cuando dos variables están altamente correlacionadas entre sí."},
-    {u:"Unidad 6 · SVR", t:"En una Support Vector Regression con kernel RBF, explica el papel de los hiperparámetros C, epsilon y gamma: ¿qué pasa con el modelo si gamma es muy grande?, ¿qué pasa si C es muy pequeño? ¿Por qué es necesario usar validación cruzada (p. ej. GridSearchCV) en vez de probar combinaciones “a mano” sobre el conjunto de prueba?"},
-    {u:"Unidad 7 · Árboles y validación", t:"Un árbol de decisión sin restricciones (max_depth=None) casi siempre sobreajusta. Explica cómo el algoritmo CART elige un corte, por qué un árbol muy profundo tiene varianza alta, y compara dos formas de controlarlo (poda por validación vs. restricciones como max_depth o min_samples_leaf)."},
-    {u:"Unidad 7 · Evaluación y comparación", t:"Has entrenado siete modelos distintos (lineal, polinomial, Ridge, Lasso, SVR, árbol, etc.) sobre el mismo conjunto de datos. Explica por qué usar validación cruzada anidada (en vez de una sola división train/test) es importante si vas a elegir hiperparámetros y comparar modelos al mismo tiempo, y qué error se comete si se usa el conjunto de prueba repetidamente para ajustar decisiones de modelado."}
+    {u:"Unidad 1 · EDA", t:"Una variable de precio tiene varios valores idénticos en un máximo artificial (censura, no un valor real). Explica por qué el boxplot y la regla del IQR, por sí solos, no distinguen esto de un valor atípico genuino."},
+    {u:"Unidad 2 · Preprocesamiento", t:"Explica, con un ejemplo, qué fuga de datos (data leakage) ocurre si ajustas un imputador o un escalador usando todo el conjunto de datos antes de dividirlo en entrenamiento y prueba."},
+    {u:"Unidad 3 · Selección de variables", t:"Explica cómo funciona, paso a paso, la Eliminación Recursiva de Variables (RFE), y menciona una desventaja práctica frente a un método de filtro simple (como la correlación)."},
+    {u:"Unidad 4 · Regresión lineal/polinomial", t:"Un modelo polinomial de grado alto se ajusta casi perfectamente a los datos de entrenamiento, pero su error es mucho mayor en datos nuevos. Nombra este fenómeno y explica, en términos de sesgo y varianza, por qué ocurre."},
+    {u:"Unidad 5 · Regularización", t:"Explica por qué Lasso (L1) puede llevar coeficientes exactamente a cero mientras que Ridge (L2) no, y qué efecto práctico tiene esto para la selección de variables."},
+    {u:"Unidad 6 · SVR", t:"En una Support Vector Regression con kernel RBF, explica qué controla el hiperparámetro gamma y qué le pasa al modelo si gamma es demasiado grande."},
+    {u:"Unidad 7 · Árboles y validación", t:"Explica por qué un árbol de decisión sin restricciones (max_depth=None) casi siempre sobreajusta, y nombra una forma concreta de controlarlo."},
+    {u:"Unidad 8 · Regresión logística y kNN", t:"Explica qué es la maldición de la dimensionalidad y por qué afecta particularmente a un clasificador como k vecinos más cercanos (kNN)."},
+    {u:"Unidad 9 · Naive Bayes y árboles de clasificación", t:"Explica el supuesto de independencia condicional («naive») detrás de Naive Bayes, y por qué el modelo suele funcionar razonablemente bien en la práctica aunque ese supuesto casi nunca se cumpla exactamente."},
+    {u:"Unidad 10 · SVM de clasificación", t:"Explica qué es el truco del kernel en una SVM y por qué permite separar clases que no son linealmente separables en el espacio original, sin construir explícitamente las variables transformadas."},
+    {u:"Unidad 11 · Redes neuronales (MLP)", t:"Explica por qué un perceptrón simple no puede resolver el problema XOR, y qué lo hace posible en una red neuronal multicapa (MLP)."},
+    {u:"Unidad 12 · Evaluación e hiperparámetros", t:"En un problema de clasificación con clases muy desbalanceadas, explica por qué la exactitud (accuracy) puede ser una métrica engañosa, y qué mide en su lugar el coeficiente kappa de Cohen o el MCC."},
+    {u:"Unidad 13 · Bagging y Random Forest", t:"Explica por qué el bagging reduce la varianza de un modelo, y qué condición debe cumplirse entre los árboles individuales para que ese beneficio ocurra."},
+    {u:"Unidad 14 · Boosting", t:"Explica la diferencia fundamental entre cómo construye sus modelos el bagging (en paralelo, de forma independiente) y el boosting (de forma secuencial), y por qué el boosting reduce principalmente el sesgo."},
+    {u:"Retroalimentación del curso", t:"Para cerrar, nos interesa tu opinión honesta sobre el curso completo: ¿qué te pareció bien (temas, actividades, ritmo, materiales)?, ¿qué te pareció mal o se podría mejorar?, y ¿qué sugerencias concretas harías para las próximas generaciones? Esta pregunta no se califica como conocimiento técnico; responde con la mayor honestidad y detalle posible."}
   ];
   var SEGUNDOS_POR_PREGUNTA = 5 * 60;
 
@@ -142,12 +162,28 @@
   var ENTRY_MATRICULA = "entry.733356364";
   var ENTRY_RESPUESTAS = ["entry.281076077","entry.186376673","entry.634086401","entry.964837105",
                           "entry.105656414","entry.564446515","entry.1295502528","entry.794515849",
-                          "entry.1084768185","entry.1344531095"];
+                          "entry.1084768185","entry.1344531095",
+                          "entry.22228828","entry.2003483118","entry.2121715522",
+                          "entry.2023987704","entry.1244027425"];
+
+  // --------------------------------------------------- Orden aleatorio --
+  // Las preguntas 0..13 (contenido) se presentan en orden aleatorio, distinto
+  // para cada estudiante; la pregunta 14 (retroalimentación) siempre va al final.
+  function generarOrden() {
+    var indices = [];
+    for (var k = 0; k < PREGUNTAS.length - 1; k++) indices.push(k);
+    for (var a = indices.length - 1; a > 0; a--) {
+      var b = Math.floor(Math.random() * (a + 1));
+      var tmp = indices[a]; indices[a] = indices[b]; indices[b] = tmp;
+    }
+    indices.push(PREGUNTAS.length - 1); // retroalimentación siempre al final
+    return indices;
+  }
 
   // ------------------------------------------------------------ Estado/LS --
-  var CLAVE = "examen_final_m1a7_v1";
+  var CLAVE = "examen_final_completo_v3";
   function estadoVacio() {
-    return {nombre:"", matricula:"", indice:0, respuestas:new Array(PREGUNTAS.length).fill(""),
+    return {nombre:"", matricula:"", indice:0, orden:null, respuestas:new Array(PREGUNTAS.length).fill(""),
             inicioPregunta:null, bloqueadas:new Array(PREGUNTAS.length).fill(false), enviado:false};
   }
   function cargar() {
@@ -155,7 +191,8 @@
       var raw = localStorage.getItem(CLAVE);
       if (!raw) return estadoVacio();
       var s = JSON.parse(raw);
-      if (!s || !Array.isArray(s.respuestas) || s.respuestas.length !== PREGUNTAS.length) return estadoVacio();
+      if (!s || !Array.isArray(s.respuestas) || s.respuestas.length !== PREGUNTAS.length ||
+          !Array.isArray(s.orden) || s.orden.length !== PREGUNTAS.length) return estadoVacio();
       return s;
     } catch (e) { return estadoVacio(); }
   }
@@ -167,6 +204,9 @@
   var elExamen = document.getElementById("pantalla-examen");
   var elResumen = document.getElementById("pantalla-resumen");
   var elListo = document.getElementById("pantalla-listo");
+  var elVencido = document.getElementById("pantalla-vencido");
+  // Domingo 15 de noviembre de 2026, 11:00 pm hora de Mérida (UTC-6) = 2026-11-16T05:00:00Z
+  var FECHA_LIMITE = new Date("2026-11-16T05:00:00Z");
   var inNombre = document.getElementById("in-nombre");
   var inMatricula = document.getElementById("in-matricula");
   var lblUnidad = document.getElementById("lbl-unidad");
@@ -214,20 +254,28 @@
     elExamen.hidden = nombre !== "examen";
     elResumen.hidden = nombre !== "resumen";
     elListo.hidden = nombre !== "listo";
+    elVencido.hidden = nombre !== "vencido";
   }
 
   // ------------------------------------------------------------- Arranque --
   function iniciarSiEsNecesario() {
     if (estado.enviado) { mostrarListo(); return; }
-    if (estado.inicioPregunta == null) { mostrarPantalla("inicio"); return; }
+    if (estado.inicioPregunta == null) {
+      // Solo bloquea el INICIO de un intento nuevo tras el plazo; a quien ya
+      // estaba respondiendo no se le corta a la mitad.
+      if (Date.now() > FECHA_LIMITE.getTime()) { mostrarPantalla("vencido"); return; }
+      mostrarPantalla("inicio");
+      return;
+    }
     irAPregunta(estado.indice, false);
   }
 
   document.getElementById("btn-comenzar").addEventListener("click", function () {
+    if (Date.now() > FECHA_LIMITE.getTime()) { mostrarPantalla("vencido"); return; }
     var nombre = inNombre.value.trim(), matricula = inMatricula.value.trim();
     if (!nombre || !matricula) { alert("Escribe tu nombre y tu correo/matrícula antes de comenzar."); return; }
     estado.nombre = nombre; estado.matricula = matricula;
-    estado.indice = 0; estado.inicioPregunta = Date.now();
+    estado.indice = 0; estado.orden = generarOrden(); estado.inicioPregunta = Date.now();
     guardar();
     irAPregunta(0, true);
   });
@@ -238,26 +286,28 @@
     if (esNueva) estado.inicioPregunta = Date.now();
     guardar();
     mostrarPantalla("examen");
-    var p = PREGUNTAS[i];
+    var realIndex = estado.orden[i];
+    var p = PREGUNTAS[realIndex];
     lblUnidad.textContent = p.u;
     lblProgreso.textContent = "Pregunta " + (i + 1) + " de " + PREGUNTAS.length;
     txtPregunta.textContent = p.t;
-    txtRespuesta.value = estado.respuestas[i] || "";
-    var yaBloqueada = !!estado.bloqueadas[i];
+    txtRespuesta.value = estado.respuestas[realIndex] || "";
+    var yaBloqueada = !!estado.bloqueadas[realIndex];
     txtRespuesta.disabled = yaBloqueada;
     avisoBloqueo.hidden = !yaBloqueada;
     btnSiguiente.disabled = false;
-    txtRespuesta.oninput = function () { estado.respuestas[i] = txtRespuesta.value; guardar(); };
+    txtRespuesta.oninput = function () { estado.respuestas[realIndex] = txtRespuesta.value; guardar(); };
     arrancarCronometro(i);
   }
 
   function arrancarCronometro(i) {
     if (timerId) clearInterval(timerId);
+    var realIndex = estado.orden[i];
     function tick() {
       var transcurrido = (Date.now() - estado.inicioPregunta) / 1000;
       var restante = SEGUNDOS_POR_PREGUNTA - transcurrido;
-      if (estado.bloqueadas[i] || restante <= 0) {
-        if (!estado.bloqueadas[i]) bloquearPregunta(i);
+      if (estado.bloqueadas[realIndex] || restante <= 0) {
+        if (!estado.bloqueadas[realIndex]) bloquearPregunta(i);
         lblTiempo.textContent = "0:00";
         return;
       }
@@ -270,8 +320,9 @@
   }
 
   function bloquearPregunta(i) {
-    estado.bloqueadas[i] = true;
-    estado.respuestas[i] = txtRespuesta.value;
+    var realIndex = estado.orden[i];
+    estado.bloqueadas[realIndex] = true;
+    estado.respuestas[realIndex] = txtRespuesta.value;
     guardar();
     txtRespuesta.disabled = true;
     avisoBloqueo.hidden = false;
@@ -281,9 +332,10 @@
 
   btnSiguiente.addEventListener("click", function () {
     var i = estado.indice;
-    if (estado.bloqueadas[i]) return;
-    estado.bloqueadas[i] = true; // ya no se puede regresar a editarla
-    estado.respuestas[i] = txtRespuesta.value;
+    var realIndex = estado.orden[i];
+    if (estado.bloqueadas[realIndex]) return;
+    estado.bloqueadas[realIndex] = true; // ya no se puede regresar a editarla
+    estado.respuestas[realIndex] = txtRespuesta.value;
     guardar();
     if (timerId) { clearInterval(timerId); timerId = null; }
     irAPregunta(i + 1, true);
@@ -294,9 +346,10 @@
     mostrarPantalla("resumen");
     var ol = document.getElementById("lista-resumen");
     ol.innerHTML = "";
-    PREGUNTAS.forEach(function (p, i) {
+    estado.orden.forEach(function (realIndex) {
+      var p = PREGUNTAS[realIndex];
       var li = document.createElement("li");
-      var resp = (estado.respuestas[i] || "").trim();
+      var resp = (estado.respuestas[realIndex] || "").trim();
       var estadoTxt = resp ? (resp.length + " caracteres escritos") : "— sin respuesta —";
       li.innerHTML = "<b>" + p.u + ":</b> " + estadoTxt;
       ol.appendChild(li);
