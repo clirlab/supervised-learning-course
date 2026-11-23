@@ -47,3 +47,9 @@ footer{border-top:1px solid var(--borde);padding:20px 0;color:var(--suave);font-
 .pasos{margin:6px 0 10px;padding-left:22px}
 .pasos li{margin:4px 0}
 [hidden]{display:none!important}
+.tabla-envoltura{overflow-x:auto;margin-top:12px;border:1px solid var(--borde);border-radius:10px}
+.tabla-calif{width:100%;border-collapse:collapse;font-size:14px;min-width:420px}
+.tabla-calif th,.tabla-calif td{padding:7px 12px;text-align:center;border-bottom:1px solid var(--borde)}
+.tabla-calif th{background:var(--fondo2);color:var(--primario);font-weight:700;position:sticky;top:0}
+.tabla-calif td:first-child,.tabla-calif th:first-child{text-align:left}
+.tabla-calif tbody tr:nth-child(even){background:var(--fondo2)}
